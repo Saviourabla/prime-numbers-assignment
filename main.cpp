@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
 
-bool isPrime(int e)
+bool isPrime(int x)
 {
-    if (e <= 1)
+    if (x <= 1)
     {
         return false;
     }
 
-    for (int i =2; i<e; i++)
+    for (int i =2; i<x; i++)
     {
-        if(e%i==0)
+        if(x%i==0)
         {
             return false;
         }
@@ -22,21 +22,22 @@ bool isPrime(int e)
 int main()
 {
     float sum=0.0;
-    int c=0;
-    int e;
+    int count=0;
+    int x;
     cout<<"type a number"<<endl;
-    cin>>e;
+    cin>>x;
 
-    for (int i=1; i<e; i++)
+    for (int i=1; i<x; i++)
     {
         if (isPrime(i))
         {
             sum+=i;
-            c+=1;
+            count++;
         }
     }
 
-    cout << "The sum of Prime numbers below " << e << " is " << sum <<endl;
-    float avg=sum/c;
-    cout<<"The average of the prime numbers is "<<avg<<endl;
+    cout << "The sum of Prime numbers below " << x << " is " << sum <<endl;
+    float average=sum/count;
+    cout<<"The average of the prime numbers is "<<average<<endl;
 }
+/*Saviour Abla Kaledzi 1096242*/
